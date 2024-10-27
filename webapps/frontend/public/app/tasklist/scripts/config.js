@@ -28,9 +28,10 @@ export default {
   //   "long":   "LLLL"
   // },
   //
-  // "locales": {
-  //    "availableLocales": ["en", "de"],
-  //    "fallbackLocale": "en"
+  locales: {
+    availableLocales: ['en', 'de', 'fa'],
+    fallbackLocale: 'en'
+  },
   //  },
   // customScripts: [
   //   // If you have a folder called 'my-custom-script' (in the 'tasklist' folder)

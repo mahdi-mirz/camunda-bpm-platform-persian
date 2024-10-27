@@ -18,7 +18,8 @@
 'use strict';
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular');
-var moment = require('camunda-bpm-sdk-js/vendor/moment');
+var moment = require('camunda-bpm-sdk-js/vendor/moment-jalaali');
+moment.locale('fa');
 require('angular-translate');
 
 var filtersModule = angular.module('cam.commons.filter.date', [
@@ -61,7 +62,9 @@ filtersModule.config([
             date = new Date(date);
           }
 
-          return moment(date, moment.ISO_8601).format(camDateFormat(variant));
+          return moment(date)
+            .locale('fa')
+            .format(camDateFormat(variant));
         };
       }
     ]);
